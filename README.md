@@ -1,4 +1,4 @@
-# twitter-algo-eval
+# twitter-draft-scorer
 
 Train a local engagement evaluator on your own X/Twitter archive and score draft posts against your historical performance.
 
