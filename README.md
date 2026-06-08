@@ -2,7 +2,7 @@
 
 Train a local engagement evaluator on your own X/Twitter archive and score draft posts against your historical performance.
 
-X has open-sourced parts of its recommendation/ranking algorithm, which makes its broad engagement incentives easier to inspect. This project uses that context plus your own archive data to build a local calibration tool: given your past posts, likes, retweets, wording, and send times, it estimates how a draft compares with your own history.
+X has open-sourced parts of its recommendation/ranking algorithm in [`twitter/the-algorithm`](https://github.com/twitter/the-algorithm), which makes its broad engagement incentives easier to inspect. This project uses that context plus your own archive data to build a local calibration tool: given your past posts, likes, retweets, wording, and send times, it estimates how a draft compares with your own history.
 
 This is not a full X algorithm clone and does not predict impressions or true reach.
 
@@ -13,7 +13,7 @@ This is not a full X algorithm clone and does not predict impressions or true re
 - Scores engagement as `likes + 2 * retweets`.
 - Reports a predicted score and historical percentile.
 - Uses transparent features such as wording, length, questions, numbers, proper names, topic/mechanism terms, hour, and weekday.
-- Is designed with awareness that X's recommendation code is public, while still training on your personal archive rather than claiming platform-level reach prediction.
+- Is designed with awareness that X's recommendation code is public: [`twitter/the-algorithm`](https://github.com/twitter/the-algorithm), while still training on your personal archive rather than claiming platform-level reach prediction.
 - Runs locally; no X API required.
 
 ## Install
