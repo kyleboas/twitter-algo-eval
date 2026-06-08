@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "x-archive-engagement-eval"
+version = "0.1.0"
+description = "Train a local draft engagement evaluator from your own X/Twitter archive."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Kyle" }]
+dependencies = [
+  "numpy>=1.24",
+  "scipy>=1.10",
+  "scikit-learn>=1.3",
+]
+
+[project.scripts]
+x-archive-engagement-eval = "x_archive_engagement_eval.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
