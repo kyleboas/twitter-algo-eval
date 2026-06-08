@@ -1,8 +1,10 @@
-# X Archive Engagement Eval
+# twitter-algp-eval
 
 Train a local engagement evaluator on your own X/Twitter archive and score draft posts against your historical performance.
 
-This is not an X algorithm clone and does not predict impressions or true reach. It is a local calibration tool: given your past posts, likes, retweets, wording, and send times, it estimates how a draft compares with your own archive.
+X has open-sourced parts of its recommendation/ranking algorithm, which makes its broad engagement incentives easier to inspect. This project uses that context plus your own archive data to build a local calibration tool: given your past posts, likes, retweets, wording, and send times, it estimates how a draft compares with your own history.
+
+This is not a full X algorithm clone and does not predict impressions or true reach.
 
 ## What it does
 
@@ -11,6 +13,7 @@ This is not an X algorithm clone and does not predict impressions or true reach.
 - Scores engagement as `likes + 2 * retweets`.
 - Reports a predicted score and historical percentile.
 - Uses transparent features such as wording, length, questions, numbers, proper names, topic/mechanism terms, hour, and weekday.
+- Is designed with awareness that X's recommendation code is public, while still training on your personal archive rather than claiming platform-level reach prediction.
 - Runs locally; no X API required.
 
 ## Install
